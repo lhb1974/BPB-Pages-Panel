@@ -190,7 +190,7 @@ export default {
 
                     default:
                         // return new Response('Not found', { status: 404 });
-                        url.hostname = 'www.visa.com';
+                        url.hostname = 'icook.hk';
                         url.protocol = 'https:';
                         request = new Request(url, request);
                         return await fetch(request);
@@ -779,7 +779,7 @@ const getNormalConfigs = async (env, hostName, client) => {
     const resolved = await resolveDNS(hostName);
     const Addresses = [
         hostName,
-        'www.visa.com',
+        'icook.hk',
         ...(cleanIPs ? cleanIPs.split(',') : []),
         ...resolved.ipv4,
         ...resolved.ipv6.map((ip) => `[${ip}]`),
@@ -984,7 +984,7 @@ const getFragmentConfigs = async (env, hostName, client) => {
     const resolved = await resolveDNS(hostName);
     const Addresses = [
         hostName,
-        "www.visa.com",
+        "icook.hk",
         ...(cleanIPs ? cleanIPs.split(",") : []),
         ...resolved.ipv4,
         ...resolved.ipv6.map((ip) => `[${ip}]`),
@@ -1139,7 +1139,7 @@ const getSingboxConfig = async (env, hostName) => {
     const resolved = await resolveDNS(hostName);
     const Addresses = [
         hostName,
-        "www.visa.com",
+        "icook.hk",
         ...(cleanIPs ? cleanIPs.split(",") : []),
         ...resolved.ipv4,
         ...resolved.ipv6.map((ip) => `[${ip}]`),
